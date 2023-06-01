@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/state_tax"
+        android:icon="@drawable/airplane_icon"
+        android:id="@+id/state_tax" />
+
+    <item android:title="@string/local_tax"
+        android:icon="@drawable/baseline_location_on_24"
+        android:id="@+id/local_tax"/>
+
+</menu>
