@@ -4,4 +4,21 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="local_tax">Local Tax</string>
     <string name="state_tax">State Tax</string>
+    <string name="amount">Amount</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="tax_percentage">Tax %</string>
+    <string name="calculate">Calculate</string>
+    <string name="zip_code_tax">Zip Code Tax</string>
+    <string name="state_amount">Amount</string>
+    <string name="state_calculate">Calculate</string>
+    <string name="state_enter_amount">Enter Amount</string>
+    <string name="state_tax_percent">Tax %</string>
+    <string name="state_tax_percentage"> State Tax Percentage</string>
+    <string name="state_total">Total</string>
+    <string name="state_total_amount">Total Amount</string>
+    <string name="input_zip_code">Input Zip Code</string>
+    <string name="final_total">Final Total</string>
+    <string name="local_zip_code_tax">Local Zip Code Tax</string>
+    <string name="zip_code">Zip Code</string>
+    <string name="local_total">Total</string>
 </resources>

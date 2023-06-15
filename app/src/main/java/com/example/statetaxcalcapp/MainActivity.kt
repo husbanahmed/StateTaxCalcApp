@@ -11,17 +11,15 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
         val stateFragment = StateFragment()
         val localFragment = LocalFragment()
-
-        setCurrentFragment(localFragment)
-
         val binding = ActivityMainBinding.inflate(layoutInflater)
 
-        binding.bottomNavigationView.setOnItemSelectedListener {item ->
+        setContentView(binding.root)
+        setCurrentFragment(localFragment)
 
+        binding.bottomNavigationView.setOnItemSelectedListener { item ->
             when(item.itemId) {
                 R.id.state_tax -> setCurrentFragment(stateFragment)
                 R.id.local_tax -> setCurrentFragment(localFragment)
