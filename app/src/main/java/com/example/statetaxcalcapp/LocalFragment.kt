@@ -2,20 +2,31 @@ package com.example.statetaxcalcapp
 import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.example.statetaxcalcapp.databinding.FragmentLocalBinding
 
 
+class LocalFragment : Fragment() {
 
-class LocalFragment : Fragment(R.layout.fragment_local) {
+    private lateinit var binding: FragmentLocalBinding
+    private val LOCATION_PERMISSION_REQUEST_CODE = 100
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        requestLocationPermission()
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        binding = FragmentLocalBinding.inflate(inflater,container,false)
+        return binding.root
     }
 
-    private val LOCATION_PERMISSION_REQUEST_CODE = 100
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.etLocalEnterAmount.setOnClickListener{
+            val saveLocalTotal = binding.etLocalEnterAmount.text.toString()
+        }
+    }
 
     // Inside your fragment
 
