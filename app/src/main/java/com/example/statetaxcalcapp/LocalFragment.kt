@@ -24,7 +24,11 @@ class LocalFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.etLocalEnterAmount.setOnClickListener{
-            val saveLocalTotal = binding.etLocalEnterAmount.text.toString()
+            val savedLocalTotal = binding.etLocalEnterAmount.text.toString()
+        }
+
+        binding.etInputLocalZipCode.setOnClickListener {
+            val savedZipCode = binding.etInputLocalZipCode.text.toString()
         }
     }
 
