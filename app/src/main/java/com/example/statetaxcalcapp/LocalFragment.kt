@@ -30,6 +30,7 @@ class LocalFragment : Fragment() {
         binding.etInputLocalZipCode.setOnClickListener {
             val savedZipCode = binding.etInputLocalZipCode.text.toString()
         }
+
     }
 
     // Inside your fragment
