@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
             when(item.itemId) {
                 R.id.state_tax -> setCurrentFragment(stateFragment)
                 R.id.local_tax -> setCurrentFragment(localFragment)
-
             }
             true
         }

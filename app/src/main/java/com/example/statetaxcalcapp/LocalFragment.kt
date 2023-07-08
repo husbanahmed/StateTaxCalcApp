@@ -14,10 +14,11 @@ import retrofit2.HttpException
 import java.io.IOException
 
 
-class LocalFragment : Fragment() {
+abstract class LocalFragment : Fragment() {
 
     private lateinit var binding: FragmentLocalBinding
     private val LOCATION_PERMISSION_REQUEST_CODE = 100
+    private lateinit var viewModel: LocalFragmentViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentLocalBinding.inflate(inflater,container,false)
@@ -35,21 +36,7 @@ class LocalFragment : Fragment() {
             val savedZipCode = binding.etInputLocalZipCode.text.toString()
         }
 
-        lifecycleScope.launchWhenCreated {
-            val response = try {
-                RetrofitInstance.api.getZipCode("V9y59G2eSHy6YabFQiCM7A==E9tN00VLUkbrSDMP","91303")
-            }catch (e: IOException){
-                Log.d(TAG,"IOException, you might not have internet connection")
-                return@launchWhenCreated
-            }catch (e: HttpException){
-                Log.d(TAG,"HttpException,unexpected launch")
-                return@launchWhenCreated
-            }
-            if(response.isSuccessful){
-                Log.d(TAG,"This is the zipocde tax")
-            }
-        }
-
+        viewModel.fetchData()
     }
 
     // Inside your fragment
