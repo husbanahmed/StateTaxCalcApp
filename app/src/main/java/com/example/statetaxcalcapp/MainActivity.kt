@@ -2,13 +2,11 @@ package com.example.statetaxcalcapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
 import com.example.statetaxcalcapp.databinding.ActivityMainBinding
 
 const val TAG = "TAG";
 class MainActivity : AppCompatActivity() {
-    private val viewModel: LocalFragmentViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
